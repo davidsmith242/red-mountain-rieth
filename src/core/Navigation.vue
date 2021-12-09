@@ -1,7 +1,12 @@
 <template>
-  <v-navigation-drawer v-model="drawer" dark
+  <v-navigation-drawer
+    v-model="drawer"
+    dark
     color="light-blue accent-4"
-   absolute left temporary >
+    absolute
+    left
+    temporary
+  >
     <v-list-item>
       <v-list-item-content>
         <v-list-item-title class="text-h6"> Navigation </v-list-item-title>
@@ -15,20 +20,15 @@
         v-model="group"
         active-class="deep-purple--text text--accent-4"
       >
-        <v-list-item data-menuanchor="page1" href="#page1">
-          <v-list-item-title>Home</v-list-item-title>
-        </v-list-item>
-
-        <v-list-item data-menuanchor="page2" href="#page2">
-          <v-list-item-title>Der Verein</v-list-item-title>
-        </v-list-item>
-
-        <v-list-item data-menuanchor="page3" href="#page3">
-          <v-list-item-title>Aktionen</v-list-item-title>
-        </v-list-item>
-
-        <v-list-item data-menuanchor="page4" href="#page4">
-          <v-list-item-title>Satzung</v-list-item-title>
+        <v-list-item
+          v-for="item in navlinks"
+          :key="item.anchor"
+          :data-menuanchor="item.anchor"
+          :href="`#${item.anchor}`"
+          active-class="highlighted"
+          :class="actSection === item.anchor ? 'highlighted' : ''"
+        >
+          <v-list-item-title>{{ item.text }}</v-list-item-title>
         </v-list-item>
       </v-list-item-group>
     </v-list>
@@ -36,10 +36,7 @@
 </template>
 
 <script>
-import {
-  // mapGetters,
-  mapMutations,
-} from "vuex";
+import { mapGetters, mapMutations } from "vuex";
 
 export default {
   name: "Navigation",
@@ -49,6 +46,10 @@ export default {
     };
   },
   computed: {
+    ...mapGetters(["navlinks"]),
+    actSection: function () {
+      return this.$store.state.actSection;
+    },
     drawer: {
       get() {
         return this.$store.state.drawer;

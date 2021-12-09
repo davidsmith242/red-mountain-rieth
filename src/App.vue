@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-app-bar app color="primary" dark>
-      <v-app-bar-nav-icon @click.stop="toggleDrawer()"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon @click.stop="toggleDrawer()" class="d-flex d-sm-none"></v-app-bar-nav-icon>
       <div class="d-flex align-center mr-3">
         <v-img
           alt="Vuetify Logo"
@@ -14,13 +14,10 @@
       </div>
       <v-toolbar-title>Title</v-toolbar-title>
       <v-spacer></v-spacer>
-      <ul id="menu">
-        <li data-menuanchor="page1" class="active">
-          <a href="#page1">Home</a>
+      <ul id="menu" class="d-none d-sm-flex">
+        <li v-for="item in navlinks" :key="item.anchor" :data-menuanchor="item.anchor" >
+          <v-btn class="ma-1" small plain :href="`#${item.anchor}`" v-bind:class="{ active: actSection === item.anchor }">{{item.text}}</v-btn>
         </li>
-        <li data-menuanchor="page2"><a href="#page2">Der Verein</a></li>
-        <li data-menuanchor="page3"><a href="#page3">Aktionen</a></li>
-        <li data-menuanchor="page4"><a href="#page4">Satzung</a></li>
       </ul>
     </v-app-bar>
     <Navigation v-bind:drawer="drawer" />
@@ -96,7 +93,7 @@
 
 import Navigation from "./core/Navigation"
  import {
-    // mapGetters
+    mapGetters,
     mapMutations
   } from 'vuex'
 
@@ -110,6 +107,8 @@ export default {
 
   data() {
     return {
+      actSection: 'page1',
+      isReady: false,
       value: 'recent',
       drawer: false,
       group: null,
@@ -136,6 +135,12 @@ export default {
       },
     };
   },
+  computed: {
+    // mix the getters into computed with object spread operator
+    ...mapGetters([
+      'navlinks',
+    ]),
+  },
   watch: {
     group () {
       this.drawer = false
@@ -147,20 +152,16 @@ export default {
     this.componentsReady();
   },
   methods: {
-    ...mapMutations(['toggleDrawer']),
+    ...mapMutations(['toggleDrawer','setActSection']),
     componentsReady() {
       this.$refs.fullpage.init();
+      this.isReady = true
     },
-    afterLoad() {
-      console.log("After load");
+    afterLoad(origin, destination) {
+      console.log("After load: " + destination.anchor);
+      this.actSection = destination.anchor;
+      this.setActSection(destination.anchor);
     },
-    // toggleNavigation () {
-    //   this.options.navigation = !this.options.navigation
-    // },
-    // toggleScrollbar () {
-    //   console.log('Changing scrollbar...')
-    //   this.options.scrollBar = !this.options.scrollBar
-    // }
   },
 };
 </script>
