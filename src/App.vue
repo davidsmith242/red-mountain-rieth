@@ -40,25 +40,22 @@
           <div class="slide">
             <Helfen />
           </div>
-        </div>
-        <div class="section">
           <div class="slide">
-            <h3>Aktion 1</h3>
-            <p>
-              test tedsndfmmn fdweufnwenfwfwjn fwjefnuwenf fweifjweij
-              fwefwefwefwe
-            </p>
-            <p>dfmifmeimf efiefeijiejfief feifjeifjeif feifjiejf</p>
-          </div>
-          <div class="slide">
-            <h3>Aktion 2</h3>
-          </div>
-          <div class="slide">
-            <h3>Aktion 3</h3>
+            <Transparenz />
           </div>
         </div>
         <div class="section">
-          <h3>Satzung</h3>
+          <div class="slide">
+            <Projektarbeit />
+          </div>
+          <div class="slide">
+            <h2>Aktuelles Projekt 22/23</h2>
+            <p class="font-weight-regular">Tagesgruppe Sofioter Straße</p>
+            <Projektbericht1 />
+          </div>
+        </div>
+        <div class="section">
+          <Spenden />
         </div>
       </full-page>
       <v-bottom-navigation 
@@ -95,10 +92,18 @@ import Navigation from "./core/Navigation"
 import Home from "./components/Home"
 import About from "./components/About"
 import Helfen from "./components/Helfen"
- import {
-    mapGetters,
-    mapMutations
-  } from 'vuex'
+import Transparenz from "./components/Transparenz"
+import Projektarbeit from "@/components/Projektarbeit"
+import Spenden from "@/components/Spenden"
+
+import Projektbericht1 from "@/dialogs/Projektbericht1"
+
+import {
+  mapGetters,
+  mapMutations
+} from 'vuex'
+
+
 
 export default {
   name: "App",
@@ -108,6 +113,10 @@ export default {
     Home,
     About,
     Helfen,
+    Transparenz,
+    Projektarbeit,
+    Spenden,
+    Projektbericht1,
   },
 
   data() {
@@ -125,12 +134,14 @@ export default {
         controlArrows: true,
         menu: "#menu",
         navigation: true,
-        anchors: ["home", "about", "page3", "page4"],
+        anchors: ["home", "about", "projects", "donates"],
         sectionsColor: [
           "#efefef",
           "#efefef",
-          "#0798ec",
-          "#fec401",
+          "#efefef",
+          "#efefef",
+          // "#0798ec",
+          // "#fec401",
           "#1bcee6",
           "#ee1a59",
           "#2c3e4f",
@@ -163,7 +174,7 @@ export default {
       this.isReady = true
     },
     afterLoad(origin, destination) {
-      console.log("After load: " + destination.anchor);
+      // console.log("After load: " + destination.anchor);
       this.actSection = destination.anchor;
       this.setActSection(destination.anchor);
     },

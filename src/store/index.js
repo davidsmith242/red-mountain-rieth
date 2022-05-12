@@ -17,12 +17,12 @@ export default new Vuex.Store({
         anchor: 'about'
       },
       {
-        text: 'Aktionen',
-        anchor: 'page3'
+        text: 'Projektarbeit',
+        anchor: 'projects'
       },
       {
-        text: 'Satzung',
-        anchor: 'page4'
+        text: 'Jetzt Spenden',
+        anchor: 'donates'
       },
     ]
   },

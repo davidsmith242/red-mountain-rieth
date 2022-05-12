@@ -18,7 +18,7 @@
           für uns Heimat, die wir auf keinen Fall eintauschen würden. 
         </p>
         <p>
-          <a href="#about">
+          <a href="#about/1">
             Wie wir helfen
           </a>
         </p>

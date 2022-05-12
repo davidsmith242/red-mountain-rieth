@@ -16,7 +16,20 @@ import VueFullPage from 'vue-fullpage.js'
 
 import vuetify from './plugins/vuetify'
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+/* import specific icons */
+import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
+import { faPaypal } from '@fortawesome/free-brands-svg-icons'
+/* add icons to the library */
+library.add(faUserSecret, faPaypal)
+
+/* import font awesome icon component */
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
 Vue.config.productionTip = false
+
+/* add font awesome icon component */
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.use(VueFullPage)
 Vue.use(VueLazyload, {})
