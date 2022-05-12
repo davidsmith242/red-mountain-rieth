@@ -6,15 +6,15 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     drawer: false,
-    actSection: 'page1',
+    actSection: 'home',
     navitems: [
       {
         text: 'Home',
-        anchor: 'page1'
+        anchor: 'home'
       },
       {
         text: 'Der Verein',
-        anchor: 'page2'
+        anchor: 'about'
       },
       {
         text: 'Aktionen',

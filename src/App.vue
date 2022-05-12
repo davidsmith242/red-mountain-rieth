@@ -12,7 +12,7 @@
           width="40"
         />
       </div>
-      <v-toolbar-title>Title</v-toolbar-title>
+      <v-toolbar-title>RM@R</v-toolbar-title>
       <v-spacer></v-spacer>
       <ul id="menu" class="d-none d-sm-flex">
         <li v-for="item in navlinks" :key="item.anchor" :data-menuanchor="item.anchor" >
@@ -31,15 +31,15 @@
         :skip-init="true"
       >
         <div class="section">
-          <!-- <Home /> -->
-          <v-container fluid>
-
-          Home
-          </v-container>
+          <Home />
         </div>
         <div class="section">
-          <!-- <Home /> -->
-          Der Verein
+          <div class="slide">
+            <About />
+          </div>
+          <div class="slide">
+            <Helfen />
+          </div>
         </div>
         <div class="section">
           <div class="slide">
@@ -92,6 +92,9 @@
 // import HelloWorld from "./components/HelloWorld";
 
 import Navigation from "./core/Navigation"
+import Home from "./components/Home"
+import About from "./components/About"
+import Helfen from "./components/Helfen"
  import {
     mapGetters,
     mapMutations
@@ -101,13 +104,15 @@ export default {
   name: "App",
 
   components: {
-    // HelloWorld,
     Navigation,
+    Home,
+    About,
+    Helfen,
   },
 
   data() {
     return {
-      actSection: 'page1',
+      actSection: 'home',
       isReady: false,
       value: 'recent',
       drawer: false,
@@ -120,10 +125,10 @@ export default {
         controlArrows: true,
         menu: "#menu",
         navigation: true,
-        anchors: ["page1", "page2", "page3", "page4"],
+        anchors: ["home", "about", "page3", "page4"],
         sectionsColor: [
-          "#41b883",
-          "#ff5f45",
+          "#efefef",
+          "#efefef",
           "#0798ec",
           "#fec401",
           "#1bcee6",
