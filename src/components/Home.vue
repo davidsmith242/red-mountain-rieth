@@ -27,7 +27,7 @@
         </p>
         <p>
           <a href="#about">
-            Neugiering?
+            Neugierig?
           </a>
         </p>
       </v-col>
