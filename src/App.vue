@@ -63,20 +63,16 @@
         background-color="blue"
         fixed
         >
-        <v-btn value="recent">
-          <span>Recent</span>
-
-          <v-icon>mdi-history</v-icon>
-        </v-btn>
+        <Kontakt />
 
         <v-btn value="favorites">
-          <span>Favorites</span>
+          <span>Impressum</span>
 
           <v-icon>mdi-heart</v-icon>
         </v-btn>
 
         <v-btn value="nearby">
-          <span>Nearby</span>
+          <span>Datenschutz</span>
 
           <v-icon>mdi-map-marker</v-icon>
         </v-btn>
@@ -97,6 +93,7 @@ import Projektarbeit from "@/components/Projektarbeit"
 import Spenden from "@/components/Spenden"
 
 import Projektbericht1 from "@/dialogs/Projektbericht1"
+import Kontakt from "@/dialogs/Kontakt"
 
 import {
   mapGetters,
@@ -117,6 +114,7 @@ export default {
     Projektarbeit,
     Spenden,
     Projektbericht1,
+    Kontakt,
   },
 
   data() {
