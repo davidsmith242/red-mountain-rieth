@@ -71,11 +71,7 @@
           <v-icon>mdi-heart</v-icon>
         </v-btn>
 
-        <v-btn value="nearby">
-          <span>Datenschutz</span>
-
-          <v-icon>mdi-map-marker</v-icon>
-        </v-btn>
+        <Datenschutz />
       </v-bottom-navigation>
     </v-main>
   </v-app>
@@ -94,12 +90,12 @@ import Spenden from "@/components/Spenden"
 
 import Projektbericht1 from "@/dialogs/Projektbericht1"
 import Kontakt from "@/dialogs/Kontakt"
+import Datenschutz from "@/dialogs/Datenschutz"
 
 import {
   mapGetters,
   mapMutations
 } from 'vuex'
-
 
 
 export default {
@@ -115,7 +111,8 @@ export default {
     Spenden,
     Projektbericht1,
     Kontakt,
-  },
+    Datenschutz,
+},
 
   data() {
     return {

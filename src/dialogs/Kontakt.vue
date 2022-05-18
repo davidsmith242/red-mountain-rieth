@@ -7,6 +7,7 @@
         <v-btn
           v-bind="attrs"
           v-on="on"
+          :text="text"
         >
           <span>Kontakt</span>
           <v-icon>mdi-card-account-phone-outline</v-icon>
@@ -18,44 +19,12 @@
           Kontakt
         </v-card-title>
         <v-card-text>
-          <v-list two-line>
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon color="indigo">
-                  mdi-phone-classic
-                </v-icon>
-              </v-list-item-icon>
-
-              <v-list-item-content>
-                <v-list-item-title>0170000000</v-list-item-title>
-                <v-list-item-subtitle>Mobil</v-list-item-subtitle>
-              </v-list-item-content>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-action></v-list-item-action>
-              <v-list-item-content>
-                <v-list-item-title>036100000</v-list-item-title>
-                <v-list-item-subtitle>Festnetz</v-list-item-subtitle>
-              </v-list-item-content>
-            </v-list-item>
-            <v-divider inset></v-divider>
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon color="indigo">
-                  mdi-map-marker
-                </v-icon>
-              </v-list-item-icon>
-
-              <v-list-item-content>
-                <v-list-item-title>1400 Main Street</v-list-item-title>
-                <v-list-item-subtitle>99000 Erfurt</v-list-item-subtitle>
-              </v-list-item-content>
-            </v-list-item>
-          </v-list>
+          <kontakt-daten />
           
-        <h2 class="text-h6 text-md-h5 mb-3">
-          Kontaktformular
-        </h2>
+          <h2 class="text-h6 text-md-h5 mb-3">
+            Ihre Nachricht an uns
+          </h2>
+          <kontakt-formular />
 
 
         </v-card-text>
@@ -79,6 +48,11 @@
 <script>
   export default {
     name: 'Kontakt',
+    props: ['text'],
+    components: {
+      KontaktDaten: () => import('@/core/KontaktDaten'),
+      KontaktFormular: () => import('@/core/KontaktForm'),
+    },
     data: () => {
       return {
         dialog: false,

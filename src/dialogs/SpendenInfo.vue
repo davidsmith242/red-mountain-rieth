@@ -70,7 +70,7 @@
           
           <p>
             Info Spendenquittung: Die Spendenbescheinigung ist steuerlich absetzbar.
-            <Kontakt />
+            <Kontakt text />
           </p>
 
 
