@@ -26,6 +26,11 @@ library.add(faUserSecret, faPaypal)
 /* import font awesome icon component */
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
+import VueRouter from 'vue-router'
+import router from './routes.js'
+// import FullPage from "./FullPage"
+
+
 Vue.config.productionTip = false
 
 /* add font awesome icon component */
@@ -33,7 +38,12 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.use(VueFullPage)
 Vue.use(VueLazyload, {})
+Vue.use(VueRouter)
+
+
+
 new Vue({
+  router,
   vuetify,
   store,
   render: h => h(App)

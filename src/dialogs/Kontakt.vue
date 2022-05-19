@@ -47,7 +47,7 @@
 
 <script>
   export default {
-    name: 'Kontakt',
+    name: 'KontaktDialog',
     props: ['text'],
     components: {
       KontaktDaten: () => import('@/core/KontaktDaten'),

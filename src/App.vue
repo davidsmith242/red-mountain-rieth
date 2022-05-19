@@ -1,5 +1,6 @@
 <template>
-  <v-app>
+  <v-app id="app">
+    <v-main>
     <v-app-bar app color="primary" dark>
       <v-app-bar-nav-icon @click.stop="toggleDrawer()" class="d-flex d-sm-none"></v-app-bar-nav-icon>
       <div class="d-flex align-center mr-3">
@@ -17,53 +18,25 @@
       <ul id="menu" class="d-none d-sm-flex">
         <li v-for="item in navlinks" :key="item.anchor" :data-menuanchor="item.anchor" >
           <v-btn class="ma-1" small plain :href="`#${item.anchor}`" v-bind:class="{ active: actSection === item.anchor }">{{item.text}}</v-btn>
+          <!-- <v-btn class="ma-1" small plain @click="onClick(item.anchor)" v-bind:class="{ active: actSection === item.anchor }">{{item.text}}</v-btn> -->
         </li>
       </ul>
     </v-app-bar>
     <Navigation v-bind:drawer="drawer" />
 
-    <v-main>
-      <full-page
-      
-        ref="fullpage"
-        :options="options"
-        id="fullpage"
-        :skip-init="true"
-      >
-        <div class="section">
-          <Home />
-        </div>
-        <div class="section">
-          <div class="slide">
-            <About />
-          </div>
-          <div class="slide">
-            <Helfen />
-          </div>
-          <div class="slide">
-            <Transparenz />
-          </div>
-        </div>
-        <div class="section">
-          <div class="slide">
-            <Projektarbeit />
-          </div>
-          <div class="slide">
-            <h2>Aktuelles Projekt 22/23</h2>
-            <p class="font-weight-regular">Tagesgruppe Sofioter Straße</p>
-            <Projektbericht1 />
-          </div>
-        </div>
-        <div class="section">
-          <Spenden />
-        </div>
-      </full-page>
+      <router-view></router-view>
+      <!-- <FullPage /> -->
+
       <v-bottom-navigation 
         v-model="value"
         background-color="blue"
         fixed
         >
         <Kontakt />
+        <!-- <v-btn to="/kontakt" value="kontakt">
+          <span>Kontakt</span>
+          <v-icon>mdi-card-account-phone-outline</v-icon>
+        </v-btn> -->
 
         <v-btn value="favorites">
           <span>Impressum</span>
@@ -81,16 +54,18 @@
 // import HelloWorld from "./components/HelloWorld";
 
 import Navigation from "./core/Navigation"
-import Home from "./components/Home"
-import About from "./components/About"
-import Helfen from "./components/Helfen"
-import Transparenz from "./components/Transparenz"
-import Projektarbeit from "@/components/Projektarbeit"
-import Spenden from "@/components/Spenden"
+// import Home from "./components/Home"
+// import About from "./components/About"
+// import Helfen from "./components/Helfen"
+// import Transparenz from "./components/Transparenz"
+// import Projektarbeit from "@/components/Projektarbeit"
+// import Spenden from "@/components/Spenden"
+// import FullPage from "@/FullPage"
 
-import Projektbericht1 from "@/dialogs/Projektbericht1"
+// import Projektbericht1 from "@/dialogs/Projektbericht1"
 import Kontakt from "@/dialogs/Kontakt"
 import Datenschutz from "@/dialogs/Datenschutz"
+import router from './routes.js'
 
 import {
   mapGetters,
@@ -103,15 +78,16 @@ export default {
 
   components: {
     Navigation,
-    Home,
-    About,
-    Helfen,
-    Transparenz,
-    Projektarbeit,
-    Spenden,
-    Projektbericht1,
+    // Home,
+    // About,
+    // Helfen,
+    // Transparenz,
+    // Projektarbeit,
+    // Spenden,
+    // Projektbericht1,
     Kontakt,
     Datenschutz,
+    // FullPage,
 },
 
   data() {
@@ -121,35 +97,12 @@ export default {
       value: 'recent',
       drawer: false,
       group: null,
-      options: {
-        licenseKey: "YOUR_KEY_HERE",
-        afterLoad: this.afterLoad,
-        scrollOverflow: true,
-        scrollBar: false,
-        controlArrows: true,
-        menu: "#menu",
-        navigation: true,
-        anchors: ["home", "about", "projects", "donates"],
-        sectionsColor: [
-          "#efefef",
-          "#efefef",
-          "#efefef",
-          "#efefef",
-          // "#0798ec",
-          // "#fec401",
-          "#1bcee6",
-          "#ee1a59",
-          "#2c3e4f",
-          "#ba5be9",
-          "#b4b8ab",
-        ],
-      },
     };
   },
   computed: {
     // mix the getters into computed with object spread operator
     ...mapGetters([
-      'navlinks',
+       'navlinks',
     ]),
   },
   watch: {
@@ -160,19 +113,30 @@ export default {
   mounted() {
     // `this` points to the vm instance
     // console.log("count is: " + this.count); // => "count is: 1"
-    this.componentsReady();
+    // this.componentsReady();
   },
   methods: {
     ...mapMutations(['toggleDrawer','setActSection']),
-    componentsReady() {
-      this.$refs.fullpage.init();
-      this.isReady = true
+    onClick(route) {
+      router.replace({ path: '/#' + route });
+      // var element = this.$refs[route];
+      var element = this.$attrs['data-anchor=' + route]
+      if (!element) {
+        return;
+      }
+      var top = element.offsetTop;
+
+      window.scrollTo(0, top);
     },
-    afterLoad(origin, destination) {
-      // console.log("After load: " + destination.anchor);
-      this.actSection = destination.anchor;
-      this.setActSection(destination.anchor);
-    },
+    // componentsReady() {
+    //   this.$refs.fullpage.init();
+    //   this.isReady = true
+    // },
+    // afterLoad(origin, destination) {
+    //   // console.log("After load: " + destination.anchor);
+    //   this.actSection = destination.anchor;
+    //   this.setActSection(destination.anchor);
+    // },
   },
 };
 </script>
