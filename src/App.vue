@@ -17,7 +17,7 @@
       <v-spacer></v-spacer>
       <ul id="menu" class="d-none d-sm-flex">
         <li v-for="item in navlinks" :key="item.anchor" :data-menuanchor="item.anchor" >
-          <v-btn class="ma-1" small plain :href="`#${item.anchor}`" v-bind:class="{ active: actSection === item.anchor }">{{item.text}}</v-btn>
+          <v-btn class="ma-1" small plain :href="`#${item.anchor}`" @click="onClick(item.anchor)" v-bind:class="{ active: actSection === item.anchor }">{{item.text}}</v-btn>
           <!-- <v-btn class="ma-1" small plain @click="onClick(item.anchor)" v-bind:class="{ active: actSection === item.anchor }">{{item.text}}</v-btn> -->
         </li>
       </ul>
@@ -32,11 +32,11 @@
         background-color="blue"
         fixed
         >
-        <Kontakt />
-        <!-- <v-btn to="/kontakt" value="kontakt">
+        <!-- <Kontakt /> -->
+        <v-btn to="/kontakt" value="kontakt">
           <span>Kontakt</span>
           <v-icon>mdi-card-account-phone-outline</v-icon>
-        </v-btn> -->
+        </v-btn>
 
         <v-btn value="favorites">
           <span>Impressum</span>
@@ -63,7 +63,7 @@ import Navigation from "./core/Navigation"
 // import FullPage from "@/FullPage"
 
 // import Projektbericht1 from "@/dialogs/Projektbericht1"
-import Kontakt from "@/dialogs/Kontakt"
+// import Kontakt from "@/dialogs/Kontakt"
 import Datenschutz from "@/dialogs/Datenschutz"
 import router from './routes.js'
 
@@ -85,7 +85,7 @@ export default {
     // Projektarbeit,
     // Spenden,
     // Projektbericht1,
-    Kontakt,
+    // Kontakt,
     Datenschutz,
     // FullPage,
 },
@@ -118,15 +118,23 @@ export default {
   methods: {
     ...mapMutations(['toggleDrawer','setActSection']),
     onClick(route) {
-      router.replace({ path: '/#' + route });
-      // var element = this.$refs[route];
-      var element = this.$attrs['data-anchor=' + route]
-      if (!element) {
-        return;
-      }
-      var top = element.offsetTop;
+      // router.replace({ path: '/#' + route });
+      // // var element = this.$refs[route];
+      // var element = this.$attrs['data-anchor=' + route]
+      // if (!element) {
+      //   return;
+      // }
+      // var top = element.offsetTop;
 
-      window.scrollTo(0, top);
+      // window.scrollTo(0, top);
+      // console.log('router', router.currentRoute);
+      // console.log('route', route);
+
+      if (router.currentRoute.path && router.currentRoute.path !== '/') {
+        console.log('replace', router.currentRoute.path);
+        router.replace({ path: '/#' + route });
+        
+      }
     },
     // componentsReady() {
     //   this.$refs.fullpage.init();

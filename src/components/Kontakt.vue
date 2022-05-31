@@ -1,17 +1,23 @@
 <template>
-  <v-card max-width="800">
-    <v-card-title class="text-h5 grey lighten-2">
-      Kontakt
-    </v-card-title>
-    <v-card-text>
-      <kontakt-daten />
-      
-      <h2 class="text-h6 text-md-h5 mb-3">
-        Ihre Nachricht an uns
-      </h2>
-      <kontakt-formular />
-    </v-card-text>
-  </v-card>
+  <v-container>
+      <v-row class="pb-16">
+        <v-col align-self="center">
+          <v-card>
+            <v-card-title class="text-h5 grey lighten-2">
+              Kontakt
+            </v-card-title>
+            <v-card-text>
+              <kontakt-daten />
+              
+              <h2 class="text-h6 text-md-h5 mb-3">
+                Ihre Nachricht an uns
+              </h2>
+              <kontakt-formular />
+            </v-card-text>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
 </template>
 
 <script>

@@ -117,7 +117,7 @@
     opacity: 0.2;
   }
   .quoteBoxContainer {
-    margin-right: 0;
+    margin-right: 100px;
     position:absolute;
     
     bottom:0;

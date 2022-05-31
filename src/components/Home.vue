@@ -4,9 +4,9 @@
       <v-col cols="12">
         <v-img
           :src="require('../assets/skyline.png')"
-          max-height="450"
-          max-width="1000"
+          aspect-ratio="4.3"
           contain
+          
         >
           <div class="quoteBoxContainer quoteBox text-subtitle-1 d-none d-sm-block">
               “In der Fremde erfährt man, was die Heimat wert ist” <br>
@@ -20,7 +20,7 @@
           <span class="text-caption">Ernst Wiechert</span>
         </div>
       </v-col>
-      <v-col>
+      <v-col cols="12" xl="8" offset-xl="2">
         <h1 class="text-h5 text-md-h4 mb-3">
           Liebe Freunde des Erfurter Nordens – Herzlich willkommen!
         </h1>
@@ -71,15 +71,4 @@
 </script>
 
 <style>
-  .quote {
-    /* background-color: #d3d3d3; */
-    background: rgba(221, 221, 221, 0.8);
-    /* color: white; */
-    /* font-weight: bold; */
-    margin-right: 0;
-    position:absolute;
-    padding: 10px;
-    bottom:0;
-    right:0;
-  }
 </style>

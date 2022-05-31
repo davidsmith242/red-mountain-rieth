@@ -17,7 +17,7 @@ let routes = [
   {
     path: "/",
     component: FullPage,
-    alias: ["/home", "/#home", "/#about"],
+    alias: ["/#home", "/#home", "/#about"],
     // component: require('./FullPage.vue')
   },
   {
@@ -26,17 +26,8 @@ let routes = [
   },
   {
     path: "/kontakt",
+    name: "Kontakt",
     component: Kontakt,
-  },
-  {
-    // /search/screens -> /search?q=screens
-    path: '/*#*',
-    redirect: to => {
-        console.log('to', to);
-      // the function receives the target route as the argument
-      // we return a redirect path/location here.
-      return { path: '/#home' }
-    },
   },
 //   {
 //     path: "*",
