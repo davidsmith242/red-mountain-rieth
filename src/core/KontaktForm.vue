@@ -35,6 +35,20 @@
       rows="4"
       row-height="15"
     ></v-textarea>
+    <v-checkbox
+      v-model="accept"
+      :rules="[v => !!v || 'Sie müssen der Datenschutzerlärung zustimmen!']"
+      required
+    >
+      <template v-slot:label>
+        <router-link to="/datenschutz">Ich stimme der Datenschutz­erklärung zu.</router-link>
+      </template>
+    </v-checkbox>
+    <v-checkbox
+      v-model="sendCopy"
+      label="Kopie der Nachricht per E-Mail senden"
+    >
+    </v-checkbox>
     <v-btn
         type="submit"
         :disabled="!valid"
@@ -69,7 +83,8 @@ export default {
         'Verein',
         'Projektangebot',
       ],
-
+      accept: false,
+      sendCopy: false,
     };
   },
 };

@@ -8,17 +8,17 @@
       </v-list-item-icon>
 
       <v-list-item-content>
-        <v-list-item-title>0170000000</v-list-item-title>
+        <v-list-item-title>+49 162 7800977</v-list-item-title>
         <v-list-item-subtitle>Mobil</v-list-item-subtitle>
       </v-list-item-content>
     </v-list-item>
-    <v-list-item>
+    <!-- <v-list-item>
       <v-list-item-action></v-list-item-action>
       <v-list-item-content>
         <v-list-item-title>036100000</v-list-item-title>
         <v-list-item-subtitle>Festnetz</v-list-item-subtitle>
       </v-list-item-content>
-    </v-list-item>
+    </v-list-item> -->
     <v-divider inset></v-divider>
     <v-list-item>
       <v-list-item-icon>
@@ -43,8 +43,8 @@
       </v-list-item-icon>
 
       <v-list-item-content>
-        <v-list-item-title>1400 Main Street</v-list-item-title>
-        <v-list-item-subtitle>99000 Erfurt</v-list-item-subtitle>
+        <v-list-item-title>Charlottenstrasse 1</v-list-item-title>
+        <v-list-item-subtitle>99096 Erfurt</v-list-item-subtitle>
       </v-list-item-content>
     </v-list-item>
   </v-list>

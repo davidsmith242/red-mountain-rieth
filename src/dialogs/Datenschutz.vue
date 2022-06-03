@@ -15,9 +15,6 @@
       </template>
 
       <v-card>
-        <v-card-title class="text-h5 grey lighten-2">
-          Datenschutz
-        </v-card-title>
         <v-card-text>
           <Datenschutz />
         </v-card-text>

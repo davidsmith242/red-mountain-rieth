@@ -1,30 +1,31 @@
 <template>
   <v-app id="app">
     <v-main>
-    <v-app-bar app color="primary" dark>
-      <v-app-bar-nav-icon @click.stop="toggleDrawer()" class="d-flex d-sm-none"></v-app-bar-nav-icon>
-      <div class="d-flex align-center mr-3">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-      </div>
-      <v-toolbar-title>RM@R</v-toolbar-title>
-      <v-spacer></v-spacer>
-      <ul id="menu" class="d-none d-sm-flex">
-        <li v-for="item in navlinks" :key="item.anchor" :data-menuanchor="item.anchor" >
-          <v-btn class="ma-1" small plain :href="`#${item.anchor}`" @click="onClick(item.anchor)" v-bind:class="{ active: actSection === item.anchor }">{{item.text}}</v-btn>
-          <!-- <v-btn class="ma-1" small plain @click="onClick(item.anchor)" v-bind:class="{ active: actSection === item.anchor }">{{item.text}}</v-btn> -->
-        </li>
-      </ul>
-    </v-app-bar>
-    <Navigation v-bind:drawer="drawer" />
-
-      <router-view></router-view>
+      <v-app-bar app color="primary" dark>
+        <v-app-bar-nav-icon @click.stop="toggleDrawer()" class="d-flex d-sm-none"></v-app-bar-nav-icon>
+        <div class="d-flex align-center mr-3">
+          <v-img
+            alt="Vuetify Logo"
+            class="shrink mr-2"
+            contain
+            src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+            transition="scale-transition"
+            width="40"
+          />
+        </div>
+        <v-toolbar-title>RM@R</v-toolbar-title>
+        <v-spacer></v-spacer>
+        <ul id="menu" class="d-none d-sm-flex">
+          <li v-for="item in navlinks" :key="item.anchor" :data-menuanchor="item.anchor" >
+            <v-btn class="ma-1" small plain :href="`#${item.anchor}`" @click="onClick(item.anchor)" v-bind:class="{ active: actSection === item.anchor }">{{item.text}}</v-btn>
+            <!-- <v-btn class="ma-1" small plain @click="onClick(item.anchor)" v-bind:class="{ active: actSection === item.anchor }">{{item.text}}</v-btn> -->
+          </li>
+        </ul>
+      </v-app-bar>
+      <Navigation v-bind:drawer="drawer" />
+      <!-- <v-container> -->
+        <router-view></router-view>
+      <!-- </v-container> -->
       <!-- <FullPage /> -->
 
       <v-bottom-navigation 
@@ -44,7 +45,11 @@
           <v-icon>mdi-heart</v-icon>
         </v-btn>
 
-        <Datenschutz />
+        <!-- <Datenschutz /> -->
+        <v-btn to="/datenschutz" value="datenschutz">
+          <span>Datenschutz</span>
+          <v-icon>mdi-database</v-icon>
+        </v-btn>
       </v-bottom-navigation>
     </v-main>
   </v-app>
@@ -64,7 +69,7 @@ import Navigation from "./core/Navigation"
 
 // import Projektbericht1 from "@/dialogs/Projektbericht1"
 // import Kontakt from "@/dialogs/Kontakt"
-import Datenschutz from "@/dialogs/Datenschutz"
+// import Datenschutz from "@/dialogs/Datenschutz"
 import router from './routes.js'
 
 import {
@@ -86,7 +91,7 @@ export default {
     // Spenden,
     // Projektbericht1,
     // Kontakt,
-    Datenschutz,
+    // Datenschutz,
     // FullPage,
 },
 
