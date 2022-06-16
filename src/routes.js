@@ -13,6 +13,11 @@ const Datenschutz = () =>
 const Kontakt = () =>
   import(/* webpackChunkName: "group-kontakt" */ "./components/Kontakt.vue");
 
+const Impressum = () =>
+  import(
+    /* webpackChunkName: "group-impresssum" */ "./components/Impressum.vue"
+  );
+
 let routes = [
   {
     path: "/",
@@ -23,6 +28,10 @@ let routes = [
   {
     path: "/datenschutz",
     component: Datenschutz,
+  },
+  {
+    path: "/impressum",
+    component: Impressum,
   },
   {
     path: "/kontakt",

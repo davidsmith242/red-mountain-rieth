@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mb-16">
+  <v-card class="mx-auto mt-2 mb-16" max-width="800">
     <v-card-title class="text-h5 grey lighten-2">
       Datenschutz
     </v-card-title>

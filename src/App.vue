@@ -4,14 +4,18 @@
       <v-app-bar app color="primary" dark>
         <v-app-bar-nav-icon @click.stop="toggleDrawer()" class="d-flex d-sm-none"></v-app-bar-nav-icon>
         <div class="d-flex align-center mr-3">
-          <v-img
-            alt="Vuetify Logo"
-            class="shrink mr-2"
-            contain
-            src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-            transition="scale-transition"
-            width="40"
-          />
+          <!-- <router-link to="/"> -->
+            <a href="#home">
+              <v-img
+                alt="Red Mountain @ Rieth e.V. Logo"
+                class="shrink mr-1"
+                contain
+                src="RMR_Logopng.png"
+                transition="scale-transition"
+                width="50"
+              />
+            </a>
+          <!-- </router-link> -->
         </div>
         <v-toolbar-title>RM@R</v-toolbar-title>
         <v-spacer></v-spacer>
@@ -39,17 +43,22 @@
           <v-icon>mdi-card-account-phone-outline</v-icon>
         </v-btn>
 
-        <v-btn value="favorites">
+        <v-btn to="/impressum" value="impressum">
           <span>Impressum</span>
-
-          <v-icon>mdi-heart</v-icon>
+          <v-icon>mdi-information-outline </v-icon>
         </v-btn>
 
         <!-- <Datenschutz /> -->
         <v-btn to="/datenschutz" value="datenschutz">
           <span>Datenschutz</span>
-          <v-icon>mdi-database</v-icon>
+          <v-icon>mdi-database-outline</v-icon>
         </v-btn>
+
+        <v-btn href="2022-06_RedMountainRieth_Satzung.pdf" target="_blank" value="satzung">
+          <span>Satzung</span>
+          <v-icon>mdi-file-download-outline </v-icon>
+        </v-btn>
+
       </v-bottom-navigation>
     </v-main>
   </v-app>
