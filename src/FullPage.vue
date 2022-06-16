@@ -25,8 +25,7 @@
         <Projektarbeit />
       </div>
       <div class="slide">
-        <h2>Aktuelles Projekt 22/23</h2>
-        <p class="font-weight-regular">Tagesgruppe Sofioter Straße</p>
+        <SofioterStrasse />
         <Projektbericht1 />
       </div>
     </div>
@@ -48,6 +47,8 @@ import Spenden from "@/components/Spenden"
 
 import Projektbericht1 from "@/dialogs/Projektbericht1"
 
+import SofioterStrasse from "@/projekte/SofioterStrasse";
+
 import {
   mapGetters,
   mapMutations
@@ -65,6 +66,7 @@ export default {
     Projektarbeit,
     Spenden,
     Projektbericht1,
+    SofioterStrasse
 },
 
   data() {

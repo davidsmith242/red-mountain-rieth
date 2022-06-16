@@ -25,6 +25,7 @@
           :key="item.anchor"
           :data-menuanchor="item.anchor"
           :href="`#${item.anchor}`"
+          @click="onClick(item.anchor)"
           active-class="highlighted"
           :class="actSection === item.anchor ? 'highlighted' : ''"
         >
@@ -37,6 +38,7 @@
 
 <script>
 import { mapGetters, mapMutations } from "vuex";
+import router from '../routes.js'
 
 export default {
   name: "Navigation",
@@ -61,20 +63,28 @@ export default {
   },
   methods: {
     ...mapMutations(["setDrawer"]),
-    onClick(e, item) {
-      e.stopPropagation();
-
-      if (item.to === "/") {
-        this.$vuetify.goTo(0);
-        this.setDrawer(false);
-        return;
+      onClick(route) {
+      if (router.currentRoute.path && router.currentRoute.path !== '/') {
+        console.log('replace', router.currentRoute.path);
+        router.replace({ path: '/#' + route });
+        
       }
-
-      if (item.to || !item.href) return;
-
-      this.$vuetify.goTo(item.href);
-      this.setDrawer(false);
     },
+    // onClick(e, item) {
+    //   e.stopPropagation();
+    //   alert('test');
+
+    //   if (item.to === "/") {
+    //     this.$vuetify.goTo(0);
+    //     this.setDrawer(false);
+    //     return;
+    //   }
+
+    //   if (item.to || !item.href) return;
+
+    //   this.$vuetify.goTo(item.href);
+    //   this.setDrawer(false);
+    // },
   },
 };
 </script>

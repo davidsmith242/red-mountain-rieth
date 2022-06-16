@@ -5,7 +5,7 @@
         <v-app-bar-nav-icon @click.stop="toggleDrawer()" class="d-flex d-sm-none"></v-app-bar-nav-icon>
         <div class="d-flex align-center mr-3">
           <!-- <router-link to="/"> -->
-            <a href="#home">
+            <a href="#home" @click="onClick('home')">
               <v-img
                 alt="Red Mountain @ Rieth e.V. Logo"
                 class="shrink mr-1"
