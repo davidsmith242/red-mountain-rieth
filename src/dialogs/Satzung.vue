@@ -22,13 +22,27 @@
         </v-card-title>
 
         <v-card-text>
-          <pdf src="2022-06_RedMountainRieth_Satzung.pdf"></pdf>
+          <div>
+            <pdf
+              v-for="i in numPages"
+              :key="i"
+              :src="src"
+              :page="i"
+              style="display: inline-block; width: 100%"
+              ref="myPdfComponent"
+            ></pdf>
+          </div>
         </v-card-text>
 
         <v-divider></v-divider>
 
         <v-card-actions>
           <v-spacer></v-spacer>
+          <!-- <v-btn 
+            color="primary"
+            text @click="$refs.myPdfComponent.print()">
+            Drucken
+          </v-btn> -->
           <v-btn
             color="primary"
             text
@@ -43,7 +57,9 @@
 </template>
 
 <script>
-  import pdf from 'vue-pdf'
+  import pdf from 'vue-pdf';
+
+  const loadingTask = pdf.createLoadingTask('2022-06_RedMountainRieth_Satzung.pdf');
 
   export default {
     name: 'Satzung',
@@ -53,7 +69,16 @@
     data: () => {
       return {
         dialog: false,
+        src: loadingTask,
+        numPages: undefined,
       }
+    },
+    mounted() {
+
+      this.src.promise.then(pdf => {
+
+        this.numPages = pdf.numPages;
+      });
     },
   }
 </script>
