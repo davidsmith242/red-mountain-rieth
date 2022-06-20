@@ -3,7 +3,7 @@
     <h3 class="text-h5">Erste Überschrift</h3>
     <p class="text-body1">
       hier kommt der erste Absatz
-      Änderung
+      Änderung 1
     </p>
   </Projekt>
 </template>
