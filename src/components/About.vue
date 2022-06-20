@@ -24,8 +24,13 @@
         </p>
       </v-col>
       <v-col cols="12" sm="6">
-        <v-img
+        <!-- <v-img
           :src="require('../assets/takethat.jpg')"
+          contain
+          max-width="600"
+        > -->
+        <v-img
+          src="http://via.placeholder.com/600x320"
           contain
           max-width="600"
         >

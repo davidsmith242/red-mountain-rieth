@@ -42,7 +42,8 @@
     -moz-font-smoothing: antialiased;
   }
   h2 {
-    margin-top: 1em;
+    margin-top: 0em;
+    margin-bottom: 0.2em;
   }
   h3, h4 {
     margin-top: 0.5em;
