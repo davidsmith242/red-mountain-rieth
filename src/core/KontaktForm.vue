@@ -18,7 +18,6 @@
 
       <v-text-field
         v-model="firma"
-        :rules="nameRules"
         :counter="30"
         label="Firma"
       ></v-text-field>
