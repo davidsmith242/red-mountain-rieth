@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import VueLazyload from 'vue-lazyload'
+import VueResource from "vue-resource"
 import store from './store'
 
 // Optional. When using scrollOverflow:true
@@ -31,15 +32,15 @@ import router from './routes.js'
 // import FullPage from "./FullPage"
 
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 /* add font awesome icon component */
-Vue.component('font-awesome-icon', FontAwesomeIcon)
+Vue.component('font-awesome-icon', FontAwesomeIcon);
 
-Vue.use(VueFullPage)
-Vue.use(VueLazyload, {})
-Vue.use(VueRouter)
-
+Vue.use(VueFullPage);
+Vue.use(VueLazyload, {});
+Vue.use(VueRouter);
+Vue.use(VueResource);
 
 
 new Vue({
@@ -47,4 +48,4 @@ new Vue({
   vuetify,
   store,
   render: h => h(App)
-}).$mount('#app')
+}).$mount('#app');

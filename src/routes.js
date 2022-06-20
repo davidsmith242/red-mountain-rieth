@@ -13,6 +13,9 @@ const Datenschutz = () =>
 const Kontakt = () =>
   import(/* webpackChunkName: "group-kontakt" */ "./components/Kontakt.vue");
 
+const KontaktDanke = () =>
+  import(/* webpackChunkName: "group-kontakt-danke" */ "./components/KontaktDanke.vue");
+
 const Impressum = () =>
   import(
     /* webpackChunkName: "group-impresssum" */ "./components/Impressum.vue"
@@ -37,6 +40,11 @@ let routes = [
     path: "/kontakt",
     name: "Kontakt",
     component: Kontakt,
+  },
+  {
+    path: "/kontaktdanke",
+    name: "KontaktDanke",
+    component: KontaktDanke,
   },
 //   {
 //     path: "*",
