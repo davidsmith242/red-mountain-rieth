@@ -12,7 +12,7 @@
           color="primary"
           v-bind="attrs"
           v-on="on"
-        >Zum Projektbericht</v-btn>
+        >Zur Projektvorstellung</v-btn>
       </template>
 
       <v-card>
