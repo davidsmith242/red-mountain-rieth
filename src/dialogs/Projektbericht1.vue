@@ -22,7 +22,7 @@
 
         <v-card-text>
           <div>
-            <span class="text-subtitle-2">Ausgangslage:</span> 
+            <div class="text-h6">Ausgangslage:</div> 
             <p>
               Eine teilstationäre Hilfe zur Erziehung in einer Gruppe mit 8 Kindern im Alter von 7-14 Jahren 
               sowie 2 Betreuern. Es besteht eine feste Wochenstruktur mit einer Betreuung bis 17 Uhr. Das Projekt soll alle 

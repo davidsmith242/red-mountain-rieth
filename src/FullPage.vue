@@ -74,7 +74,7 @@ export default {
       options: {
         licenseKey: "YOUR_KEY_HERE",
         afterLoad: this.afterLoad,
-        scrollOverflow: true,
+        scrollOverflow: false,
         scrollBar: false,
         controlArrows: true,
         menu: "#menu",
