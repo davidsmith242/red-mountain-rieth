@@ -5,7 +5,7 @@ import VueResource from "vue-resource"
 import store from './store'
 
 // Optional. When using scrollOverflow:true
-import 'fullpage.js/vendors/scrolloverflow'
+// import 'fullpage.js/vendors/scrolloverflow'
 import 'fullpage.js/dist/fullpage.min.css'
 import './main.css'
 
