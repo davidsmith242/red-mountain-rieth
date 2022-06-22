@@ -9,14 +9,17 @@
       Gruppe. Die gezielte Förderung orientiert sich an den im Hilfeplan verankerten Zielen, die durch die Eltern, 
       Betreuer und Jugendamtsmitarbeiter gemeinsam vereinbart werden.
     </p>
+    <Projektbericht1 />
   </Projekt>
 </template>
 
 <script>
+
   export default {
     name: 'SofioterStrasse',
     components: {
-      Projekt: () => import('@/core/Projekt')
+      Projekt: () => import('@/core/Projekt'),
+      Projektbericht1: () => import('@/dialogs/Projektbericht1')
     },
   }
 </script>

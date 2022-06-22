@@ -26,7 +26,6 @@
       </div>
       <div class="slide">
         <SofioterStrasse />
-        <Projektbericht1 />
       </div>
     </div>
     <div class="section">
@@ -44,9 +43,6 @@ import Helfen from "./components/Helfen"
 import Transparenz from "./components/Transparenz"
 import Projektarbeit from "@/components/Projektarbeit"
 import Spenden from "@/components/Spenden"
-
-import Projektbericht1 from "@/dialogs/Projektbericht1"
-
 import SofioterStrasse from "@/projekte/SofioterStrasse";
 
 import {
@@ -65,7 +61,6 @@ export default {
     Transparenz,
     Projektarbeit,
     Spenden,
-    Projektbericht1,
     SofioterStrasse
 },
 

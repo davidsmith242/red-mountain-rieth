@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-row class="pb-16">
+    <v-row class="pb-2">
       <!-- <HeaderImage /> -->
       <v-col cols="12" class="text-left">
         <h2 class="text-xs-h6 text-md-h4 ">
