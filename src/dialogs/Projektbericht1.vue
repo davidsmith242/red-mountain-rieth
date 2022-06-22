@@ -3,6 +3,7 @@
     <v-dialog
       v-model="dialog"
       width="600"
+      scrollable
     >
       <template v-slot:activator="{ on, attrs }">
         <v-btn

@@ -24,7 +24,7 @@
           alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen. Als identifizierbar wird eine natürliche 
           Person angesehen, die direkt oder indirekt identifiziert werden kann. Weitere Informationen hierzu finden Sie u.a. in Art. 4 Ziff. 1 DSGVO.
           <br>
-          Diese Datenschutzerklärung kann jederzeit unter <a href="https://rmatrieth/datenschutz" target="_blank" rel="noopener noreferrer">https://rmatrieth/datenschutz</a> 
+          Diese Datenschutzerklärung kann jederzeit unter <a href="https://www.rm-rieth-ev.de/datenschutz" target="_blank" rel="noopener noreferrer">www.rm-rieth-ev.de/datenschutz</a> 
           abgerufen, abgespeichert und ausgedruckt werden.
           
           </p>
