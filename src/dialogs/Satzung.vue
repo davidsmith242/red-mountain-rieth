@@ -22,7 +22,7 @@
           Satzung
         </v-card-title>
 
-        <v-card-text>
+        <v-card-text class="dialogs">
           <div>
             <pdf
               v-for="i in numPages"

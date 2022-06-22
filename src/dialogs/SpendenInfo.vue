@@ -20,7 +20,7 @@
         <v-card-title class="text-h5 grey lighten-2">
           Spendeninformation
         </v-card-title>
-        <v-card-text>
+        <v-card-text class="dialogs">
           <v-list two-line>
             <v-list-item>
               <v-list-item-icon>

@@ -131,10 +131,4 @@
     /* color: white; */
     /* font-weight: bold; */
   }
-
-  .noscroll {
-    position: fixed;
-    overflow-x: hidden;
-    overflow-y: hidden;
-  }
   

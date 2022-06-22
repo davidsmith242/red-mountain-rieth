@@ -5,7 +5,7 @@
     <v-card-title class="text-h5 grey lighten-2">
       Kontakt
     </v-card-title>
-    <v-card-text>
+    <v-card-text class="dialogs">
       <h2 class="text-h6 text-md-h5 mb-3">
         Vielen Dank. Ihre Nachricht wurde erfolgreich &uuml;bermittelt.
       </h2>

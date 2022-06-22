@@ -20,8 +20,7 @@
           Projekt: Du und dein Körper
         </v-card-title>
 
-        <v-card-text>
-          <div>
+        <v-card-text class="dialogs">
             <div class="text-h6">Ausgangslage:</div> 
             <p>
               Eine teilstationäre Hilfe zur Erziehung in einer Gruppe mit 8 Kindern im Alter von 7-14 Jahren 
@@ -105,7 +104,6 @@
               abgeschlossen. Dazu werden wir mit den Krankenkassen zusammenarbeiten, um einen entsprechenden Kurs durchführen 
               zu können.
             </p>
-          </div>
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
@@ -130,12 +128,6 @@
         dialog: false,
       }
     },
-    beforeCreate: function(){
-      document.getElementsByTagName("body")[0].className="noscroll";
-    },
-    beforeDestroy: function(){
-      document.body.removeAttribute("class","noscroll");
-    }
   }
 </script>
 

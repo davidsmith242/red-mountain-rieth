@@ -16,7 +16,7 @@
       </template>
 
       <v-card>
-        <v-card-text>
+        <v-card-text class="dialogs">
           <Datenschutz />
         </v-card-text>
         <v-divider></v-divider>
