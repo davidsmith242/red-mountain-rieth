@@ -17,7 +17,7 @@
 
       <v-card>
         <v-card-title class="text-h5 grey lighten-2">
-          Projekt: Du und dein Körper
+          Du und dein Körper
         </v-card-title>
 
         <v-card-text class="dialogs">
