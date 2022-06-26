@@ -69,8 +69,8 @@
               </v-list-item-icon>
 
               <v-list-item-content>
-                <v-list-item-title>Go-Found-Me</v-list-item-title>
-                <v-list-item-subtitle>Go-Found</v-list-item-subtitle>
+                <v-list-item-title>erfurt-crowd</v-list-item-title>
+                <v-list-item-subtitle>Crowdfunding</v-list-item-subtitle>
               </v-list-item-content>
             </v-list-item>
           </v-list>
