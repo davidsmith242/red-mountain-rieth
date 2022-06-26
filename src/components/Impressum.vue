@@ -36,7 +36,7 @@
         Kontakt
       </h2>
       <p>
-      E-Mail: <a href="mailto:redmountainatrieth@hotmail.com">redmountainatrieth@hotmail.com</a><br />
+      E-Mail: <a href="mailto:info@rm-rieth-ev.de">info@rm-rieth-ev.de</a><br />
       Mobil: +49 162 7800977
       </p>
       <h2 class="text-h5">
