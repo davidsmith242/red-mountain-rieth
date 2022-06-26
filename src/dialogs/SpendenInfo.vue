@@ -69,17 +69,30 @@
               </v-list-item-icon>
 
               <v-list-item-content>
-                <v-list-item-title>erfurt-crowd</v-list-item-title>
-                <v-list-item-subtitle>Crowdfunding</v-list-item-subtitle>
+                <v-list-item-title>erfurt-crowd.de</v-list-item-title>
+                <v-list-item-subtitle>erfurt-crowd.de</v-list-item-subtitle>
               </v-list-item-content>
             </v-list-item>
-          </v-list>
-          
+
+            <v-divider inset></v-divider>
+
+            <v-list-item>
+              <v-list-item-icon>
+                <v-icon color="indigo">
+                  mdi-gift
+                </v-icon>
+              </v-list-item-icon>
+
+              <v-list-item-content>
+                <v-list-item-title>GoFoundMe</v-list-item-title>
+                <v-list-item-subtitle>GoFoundMe</v-list-item-subtitle>
+              </v-list-item-content>
+            </v-list-item>
+            </v-list>
           <p>
             Info Spendenquittung: Die Spendenbescheinigung ist steuerlich absetzbar.
             <Kontakt text />
           </p>
-
 
         </v-card-text>
 
