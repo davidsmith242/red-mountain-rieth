@@ -118,7 +118,7 @@
           Charlottenstrasse 1<br>
           99096 Erfurt<br>
 
-          E-Mail: <a href="mailto:redmountainatrieth@hotmail.com ">redmountainatrieth@hotmail.com </a>
+          E-Mail: <a href="mailto:info@rm-rieth-ev.de ">info@rm-rieth-ev.de </a>
           </p>
         </v-card-text>
       </v-card>
@@ -231,7 +231,7 @@
           Charlottenstrasse 1 <br>
           99096 Erfurt <br><br>
 
-          E-Mail: <a href="mailto:redmountainatrieth@hotmail.com ">redmountainatrieth@hotmail.com </a><br><br>
+          E-Mail: <a href="mailto:info@rm-rieth-ev.de ">info@rm-rieth-ev.de </a><br><br>
 
           Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der 
           Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen o. Ä.) entscheidet.
