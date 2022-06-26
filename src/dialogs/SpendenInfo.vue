@@ -48,7 +48,13 @@
               </v-list-item-icon>
 
               <v-list-item-content>
-                <v-list-item-title>PayPal-Link</v-list-item-title>
+                <v-list-item-title><form action="https://www.paypal.com/donate" method="post" target="_top">
+<input type="hidden" name="hosted_button_id" value="JH9MQSU4NJGF2" />
+<input type="image" src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Spenden mit dem PayPal-Button" />
+<img alt="" border="0" src="https://www.paypal.com/de_DE/i/scr/pixel.gif" width="1" height="1" />
+</form>
+
+</v-list-item-title>
                 <v-list-item-subtitle>PayPal</v-list-item-subtitle>
               </v-list-item-content>
             </v-list-item>
