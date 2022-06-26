@@ -2,7 +2,7 @@
   <div>
     <v-dialog
       v-model="dialog"
-      width="650"
+      width="600"
       scrollable
     >
       <template v-slot:activator="{ on, attrs }">
@@ -17,7 +17,7 @@
 
       <v-card>
         <v-card-title class="text-h5 grey lighten-2">
-          Kinderseelen stärken im Projekt "Du und dein Körper"
+          Du und dein Körper - Kinderseelen stärken
         </v-card-title>
 
         <v-card-text class="dialogs">
