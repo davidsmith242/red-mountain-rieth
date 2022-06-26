@@ -31,7 +31,7 @@
 
               <v-list-item-content>
                 <v-list-item-title>IBAN: DE88 8306 5408 0005 2314 18</v-list-item-title>
-                <v-list-item-subtitle>Skatbank, Verwendungszweck: Moskauer Platz/01</v-list-item-subtitle>
+                <v-list-item-subtitle>Verwendungszweck: Du un dein Körper</v-list-item-subtitle>
               </v-list-item-content>
             </v-list-item>
 
