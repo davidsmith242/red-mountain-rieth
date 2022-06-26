@@ -29,7 +29,7 @@
 
       <v-list-item-content>
         <v-list-item-title>
-          <a href="mailto:redmountainatrieth@hotmail.com ">redmountainatrieth@hotmail.com </a>
+          <a href="mailto:info@rm-rieth-ev.de ">info@rm-rieth-ev.de </a>
         </v-list-item-title>
         <v-list-item-subtitle>e-Mail</v-list-item-subtitle>
       </v-list-item-content>
