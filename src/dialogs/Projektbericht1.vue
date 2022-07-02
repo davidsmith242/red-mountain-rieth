@@ -17,7 +17,7 @@
 
       <v-card>
         <v-card-title class="text-h5 grey lighten-2">
-          Du und dein Körper - Kinderseelen stärken
+          Kinderseelen stärken
         </v-card-title>
 
         <v-card-text class="dialogs">
