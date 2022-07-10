@@ -5,7 +5,7 @@
       werden in einem geschützten Rahmen betreut. Die Familien erhalten durch die Tagesgruppe eine umfangreiche Unterstützung, wenn die soziale Entwicklung ihrer Kinder 
       gefährdet ist. 
     </p>
-    <Projektbericht1 />
+    <Projektbericht1 /> <SpendenInfo title="Jetzt Spenden" />
   </Projekt>
 </template>
 
@@ -15,7 +15,8 @@
     name: 'SofioterStrasse',
     components: {
       Projekt: () => import('@/core/Projekt'),
-      Projektbericht1: () => import('@/dialogs/Projektbericht1')
+      Projektbericht1: () => import('@/dialogs/Projektbericht1'),
+      SpendenInfo: () => import('@/dialogs/SpendenInfo'),
     },
   }
 </script>

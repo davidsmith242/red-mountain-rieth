@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <span>
     <v-dialog
       v-model="dialog"
       width="600"
@@ -12,12 +12,12 @@
           color="primary"
           v-bind="attrs"
           v-on="on"
-        >Zur Projektvorstellung</v-btn>
+        >Projektvorstellung</v-btn>
       </template>
 
       <v-card>
         <v-card-title class="text-h5 grey lighten-2">
-          Kinderseelen stärken
+          Kinderseelen stärken <SpendenInfo title="Jetzt Spenden" />
         </v-card-title>
 
         <v-card-text class="dialogs">
@@ -117,12 +117,15 @@
         </v-card-actions>
       </v-card>
     </v-dialog>
-  </div>
+  </span>
 </template>
 
 <script>
   export default {
-    name: 'Projektberichte',
+    name: 'Projektbericht1',
+    components: {
+      SpendenInfo: () => import('@/dialogs/SpendenInfo'),
+    },
     data: () => {
       return {
         dialog: false,

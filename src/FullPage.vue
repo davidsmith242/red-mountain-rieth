@@ -72,7 +72,7 @@ export default {
       drawer: false,
       group: null,
       options: {
-        licenseKey: "YOUR_KEY_HERE",
+        licenseKey: "gplv3-license",
         afterLoad: this.afterLoad,
         scrollOverflow: false,
         scrollBar: false,
