@@ -2,12 +2,9 @@
   <v-container>
     <v-row class="pb-2">
       <!-- <HeaderImage /> -->
-      <v-col cols="12" class="text-left">
-        <h2 class="text-xs-h6 text-md-h4 ">
-          {{titel}}
-        </h2>
-
-        <p class="font-weight-regular">
+      <v-col cols="12" class="text-left font-weight-regular">
+        <h3 class="text-h5">{{titel}}</h3>
+        <p class="">
           <slot></slot> 
         </p>
       </v-col>

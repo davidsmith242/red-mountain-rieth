@@ -15,9 +15,7 @@
           Schwimmen im Rieth, erste Konzerte im KuFZ, Knutschen im 
           Innenhof – all die Erinnerungen unserer Jugend, die wir zwischen 
           den Wohnscheiben und Punkthochhäusern gesammelt haben, bedeuten 
-          für uns Heimat, die wir auf keinen Fall eintauschen würden. 
-        </p>
-        <p>
+          für uns Heimat, die wir auf keinen Fall eintauschen würden. <br />
           <a href="#about/1">
             Wie wir helfen
           </a>

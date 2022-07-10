@@ -1,7 +1,9 @@
 {
   "name": "red-mountain-rieth",
   "version": "1.0.0",
-  "private": true,
+  "description": "Website for the non-profit association 'Red Mountain @ Rieht e.V.'",
+	"license": "GPLv3",
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

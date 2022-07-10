@@ -9,7 +9,7 @@
     <div class="section">
       <Home />
     </div>
-    <div class="section">
+    <div class="section fp-auto-height-responsive">
       <div class="slide">
         <About />
       </div>
