@@ -17,7 +17,7 @@
 
       <v-card>
         <v-card-title class="text-h5 grey lighten-2">
-          Du und dein Körper
+          Kinderseelen stärken
         </v-card-title>
 
         <v-card-text class="dialogs">
@@ -27,9 +27,9 @@
               sowie 2 Betreuern. Es besteht eine feste Wochenstruktur mit einer Betreuung bis 17 Uhr. Das Projekt soll alle 
               14 Tage stattfinden, untergliedert in folgende Module:
               Gesunde Ernährung; Sport & Fitness; Körperliche Hygiene; Mobbing/Ausgrenzung/Gewalt; Gefühle erkennen/Emotionen 
-              wahrnehmen; Entspannungsübungen
+              wahrnehmen; Entspannungsübungen.
               <br />
-              Ziel: Stärkung der körperlichen und geistigen Gesundheit sowie der Erwerb von neuem Wissen und der 
+              Ziel ist die Stärkung der körperlichen und geistigen Gesundheit sowie der Erwerb von neuem Wissen mit der 
               gleichzeitigen Stärkung des Selbstwertgefühls. Am  Ende des  Projektes  werden  die  einzelnen Bereiche 
               zusammengeführt, sodass sich für die Kinder ein Gesamtbild ergibt, welches ihnen das Zusammenwirkung 
               von einem gesunden Geist und einem gesunden Körper vermittelt.
